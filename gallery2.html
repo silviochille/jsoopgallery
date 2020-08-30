@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #miniature{margin:auto}
+        #grande{margin:auto; width:75%}
+    </style>
+</head>
+<body>
+    
+
+
+    <div id="miniature"></div>
+    <div id="grande"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="gallery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            let arrimg=["img/cust0.jpeg","img/cust1.jpeg","img/cust2.jpeg",
+        "img/cust3.jpeg","img/cust4.jpeg","img/cust5.jpeg"]
+
+        let gall2 = new Gallery(arrimg,"#grande")
+
+        gall2.mainimage()
+
+        gall2.createthumbs("#miniature",70)
+
+
+        })
+    </script>
+</body>
+</html>
